@@ -1,0 +1,662 @@
+/*------------------------------------------
+Projekt: Projektname
+Start: Startdatum des Projektes
+Letzte Aenderung: Zeit und Datum der letzten Änderung
+
+Farbschema
+
+Hintergrund: 
+Body: 
+Link: 
+Visited: 
+Hover: 
+
+ANSATZ: MOBILE FIRST
+
+/* ------------------------------------------------------------------
+   Mobile Ansicht (unterhalb 576px)
+---------------------------------------------------------------------*/
+
+/* -------------------------------------------
+  Allgemeine Gestaltung
+--------------------------------------------*/
+*{
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+#wrapper{
+	max-width: 1240px;
+	margin: -12px auto 0;
+	background-image: url("../material/bg-img/bg-index.jpg");
+	padding: 15px 0 5px;
+}
+img{
+	max-width: 100%;
+	height: auto;
+}
+
+body{
+	background-image: url();
+	font-family: Segoe, "Segoe UI", "DejaVu Sans", "Trebuchet MS", Verdana, "sans-serif";
+	font-size: 100%;
+}
+@font-face {
+			font-family: "roboto condensed";
+			font-weight: 400;
+	src:url("../fonts/roboto-condensed-v25-latin-regular.woff");}
+html{
+	font-size: 12px;
+}
+
+h1,h2,h3{
+	font-family: "roboto condensed";
+	
+}
+h1{
+	font-size: 2,5rem;
+	margin-bottom: 1rem;
+	text-align: center;
+	
+}
+h2{
+	font-size: 1.7rem;
+	margin: 1rem 0;
+}
+h3{
+	font-size: 1.3rem;
+	font-weight: 600;
+}
+h3,p,button{
+	margin-bottom: 1rem;
+}
+section{
+	padding: 0 10px;
+}
+a{
+	text-decoration: none;
+	cursor: pointer;
+}
+button{
+	cursor: pointer;
+}
+
+/*--------------------------------------------
+  Gestaltung des Headers
+--------------------------------------------*/
+header{
+	margin-top: 0.7em;
+	position: relative
+}
+header figure#logo{
+	margin: 10px 0 10px 10px;
+	
+	
+}
+header div.menubtn{
+	position: absolute;
+	 width: 25px;
+	height: 25px;
+	top: 5px;
+	right: 10px;
+    text-align: center
+}
+header div.menubtn a#open::before{
+	content: "\02637";
+	color:saddlebrown;
+	font-size: 20px;
+}
+header div.menubtn a#close::before{
+	content: "\02630";
+	color:saddlebrown;
+	font-size: 20px;
+}
+header div.menubtn a#close{
+	display: none
+		
+}
+#menu:target a#close {
+	display: block
+	
+}
+ #menu:target a#open{
+	display: none;
+}
+#menu:target nav#hauptNav{
+	height: 200px;
+}
+header figure#logo img{
+	width: 25%;
+	position: relative;
+}
+/*  hamburger Bilder*/
+.menubtn2{
+			position: absolute;
+			right:20px;
+			top:-5px;
+			
+			width: 15px;
+			height: 15px;
+		}
+		.auf , .zu{
+		
+			position: absolute;
+			
+			margin: auto;
+			transition: all 3s ease-in-out;
+		}
+  .auf{
+	      /*opacity: 0;
+	 		visibility: hidden;*/
+	        right: 2px;
+			top:0px;
+}
+
+		.zu{
+			right: -14px;
+			top:2px;
+			opacity: 0;
+	 		visibility: hidden;
+			
+		}
+		
+		.linie{
+			display: block;
+			width: 25px;
+			height:3px;
+			margin: auto 8px;
+			background-color: #000;
+			margin-top: 5px;
+		}
+		
+		.zu:before{
+			content: "";
+			width: 34px;
+			height: 34px;
+			position: absolute;
+			border:solid 2px #000;
+			border-radius: 100%;
+			right: 17px;
+			top:-7px;
+			
+		}
+		.zu .linie:first-child{
+			transform: rotate(45deg) translate(-7px,15px);
+			
+		}
+		.zu .linie:last-child{
+			transform: rotate(-45deg) translate(-5px,-18px);
+			
+		}
+		.zu .linie:nth-child(2){
+			opacity: 0
+		}
+		#menu:target .zu:before{
+			border:solid 2px #000;
+		}
+	
+		#menu:target .auf{
+			opacity: 0;
+
+			
+		}
+	
+			#menu:target .zu{
+			opacity: 1;
+				visibility: visible;
+
+		}
+			#menu:target .zu .linie:nth-child(2){
+			opacity: 0
+		}
+		#menu:target .zu .linie:first-child{
+			transform: rotate(45deg) translate(-7px,15px)
+			
+		}
+		#menu:target .zu .linie:last-child{
+			transform: rotate(-45deg) translate(-5px,-18px);
+			
+		}
+	/*Navigation beginnt */
+	
+nav#hauptNav{
+	
+	
+	height: 0;
+	overflow: hidden;
+	transition: all 2s ease-in-out;
+	
+	
+	
+	
+	
+	
+	
+	
+}
+
+
+nav#hauptNav ul li{
+	
+	
+	background-color: #eee;
+	list-style: none;
+	
+	text-align: center;
+	line-height: 25px;
+	margin-bottom: 5px
+}
+nav#hauptNav ul li:hover a{
+	color: green;
+}
+
+
+
+nav#hauptNav ul li:first-child {
+	border-left:none;
+	
+}
+
+nav#hauptNav ul li a{
+	text-decoration: none;
+	
+	color: saddlebrown;
+	font-weight: bold;
+}
+
+
+nav#hauptNav ul li ul {
+	position: relative;
+	
+	display: none;
+	z-index: 100;
+	
+	
+	
+	
+	
+}
+nav#hauptNav ul li:hover ul{
+	display: block;
+}
+
+
+nav#hauptNav ul li ul li {
+	display: block;
+	border-left:none;
+	padding: 5px 0;
+}
+nav#hauptNav ul li:hover ul li a{
+	color: saddlebrown;
+	font-weight: bold;
+	
+}
+nav#hauptNav ul li ul li a{
+	text-align: center;
+}
+nav#hauptNav ul li ul li a:hover{
+	color: green;
+}
+
+	/*Navigation endet */
+#headerBild{
+	max-width: 100%;
+	position: relative;
+	overflow: hidden;
+}
+#headerBild #slideshow{
+	width: 1000%;
+	display: flex;
+	position: relative;
+	animation: slide 30s infinite alternate;
+}
+#headerBild #slideshow .slideItem{
+	width: 10%;
+	overflow: hidden;
+	
+}
+#headerBild #slideshow .slideItem img{
+	width: 100%;
+	display: block;
+}
+@keyframes slide {
+	0%,3%{left:0%;}
+	11% ,14%{left:-100%;}
+	22% ,25%{left:-200%;}
+	33% ,36%{left:-300%;}
+	44% ,47%{left:-400%;}
+	55% ,58%{left:-500%;}
+	66% ,69%{left:-600%;}
+	77% ,80%{left:-700%;}
+	88% ,91%{left:-800%;}
+	100%{left:-900%;}
+	
+	
+}
+
+
+
+
+/*--------------------------------------------
+  Gestaltung des Mainbereichs
+--------------------------------------------*/
+
+/*--------------------------------------------
+  Gestaltung des Footers
+--------------------------------------------*/
+footer{
+	margin-top: 10px;
+	text-align: center;
+}
+nav#sozialNav{
+	max-width: 100%;
+}
+nav#sozialNav ul{
+	margin: 10px 0;
+	
+}
+
+nav#sozialNav ul li a {
+	display: inline-block;
+	text-decoration: none;
+}
+nav#sozialNav ul li  {
+	display: inline-block;
+	
+}
+	
+	
+	/* Sozial1 Awesome Iconfonts */
+
+nav#sozialNav ul li span.fa-square-facebook{
+	color: #1877f2;
+}
+nav#sozialNav ul li span.fa-square-twitter{
+	color: #1da1f2;
+}
+nav#sozialNav ul li span.fa-square-instagram{
+	color: #833ab4;
+}
+nav#sozialNav ul li span.fa-square-google-plus{
+	color: #dd4b39;
+}
+
+
+/* Sozial1 svg dateiformat */
+
+nav#sozialNav ul li img{
+	display: inline-block;
+	width: 32px;
+	height: 32px;
+	margin-top: 5px;
+	position: relative;
+    top: 10px;
+}
+
+
+
+#fa , #twt,#imp, #go{
+	background: transparent url("../material/social-sprite.png") no-repeat;
+	width: 50px;
+	height:50px ;
+	background-position:0 -50px ;
+}
+#fa:hover{
+	background-position:0 0px ;
+}
+
+#twt{
+	background-position: -50px -50px;
+}
+#twt:hover{
+	background-position: -50px 0px;
+}
+
+#go{
+	background-position: -100px -50px;
+}
+#go:hover{
+	background-position: -100px 0px;
+}
+#imp{
+	background-position: -150px -50px;
+}
+#imp:hover{
+	background-position: -150px 0px;
+}
+
+
+
+/* ------------------------------------------------------------------
+   Kleine Geräte (Porträt Tablets and große Phones - ab 576px) 
+---------------------------------------------------------------------*/
+@media only screen and (min-width:576px){
+	
+
+/* -------------------------------------------
+  Änderung allgemeine Gestaltung
+--------------------------------------------*/
+html{
+	font-size: 14px;
+}
+
+
+/*--------------------------------------------
+  Änderung Gestaltung des Headers
+--------------------------------------------*/
+	header div.menubtn{
+		display: none;
+	}
+	/*Navigation beginnt */
+	
+body#menu div#wrapper header nav#hauptNav{
+	
+	top: 0px;
+	left: 0px;
+	background-color: #eee;
+	height: 25px;
+	width: auto;
+	transition: none;
+	
+	padding-left: 10px;
+	overflow: visible;
+	
+}
+
+	
+
+nav#hauptNav ul li{
+	
+    display: inline-block;
+	position: relative;
+	list-style: none;
+	border-bottom: none;
+	width: auto;
+	
+	border-left: solid 1px saddlebrown;
+	padding-right: 15px;
+	line-height: 25px;
+	
+}
+nav#hauptNav ul li:hover a{
+	color: green;
+}
+
+
+nav#hauptNav ul li:first-child {
+	border-left:none;
+	
+}
+
+nav#hauptNav ul li a{
+	text-decoration: none;
+	margin-left: 15px;
+	color: saddlebrown;
+	font-weight: bold;
+}
+
+
+nav#hauptNav ul li ul {
+	position: absolute;
+	left: 0px;
+	visibility: hidden;
+    opacity: 0;
+	background-color: #eee;
+	width: 105%;
+	
+	
+	
+}
+nav#hauptNav ul li:hover ul{
+	opacity: 1;
+  visibility: visible;
+  transition: opacity 1s ease-in-out;
+	
+}
+nav#hauptNav ul li ul li {
+	display: block;
+	border-left:none;
+	padding: 5px 0;
+}
+nav#hauptNav ul li:hover ul li a{
+	color: saddlebrown;
+	font-weight: bold;
+	
+}
+nav#hauptNav ul li ul li a{
+	text-align: center;
+	margin: 0;
+}
+nav#hauptNav ul li ul li a:hover{
+	color: green;
+}
+
+	/*Navigation endet */
+
+/*--------------------------------------------
+  Änderung Gestaltung des Mainbereichs
+--------------------------------------------*/
+	
+	
+
+
+
+
+/*--------------------------------------------
+  Änderung Gestaltung des Footers
+--------------------------------------------*/
+
+}
+
+/* ------------------------------------------------------------------
+   Mittlere Geräte (Landscape Tablets - ab 768px) 
+---------------------------------------------------------------------*/
+@media only screen and (min-width:768px){
+/* -------------------------------------------
+  Änderung allgemeine Gestaltung
+--------------------------------------------*/
+	h3{
+		text-align: center
+	}
+
+/*--------------------------------------------
+  Änderung Gestaltung des Headers
+--------------------------------------------*/
+
+	header{
+		position: relative
+	}
+	body#menu div#wrapper header nav#hauptNav{
+		position: absolute;
+			top:10px;
+		left: auto;
+		
+		right: 0px;
+			width:auto;
+		background-color: rgba(255,255,255,0.4)
+	
+	}
+	header nav#hauptNav ul li {
+		padding: 0 25px 0 15px;
+		background-color: transparent;
+		
+	}
+	nav#hauptNav ul li ul{
+		background-color: rgba(255,255,255,0.4)
+	}
+
+	
+
+/*--------------------------------------------
+  Änderung Gestaltung des Mainbereichs
+--------------------------------------------*/
+	
+
+/*--------------------------------------------
+  Änderung Gestaltung des Footers
+--------------------------------------------*/
+
+
+}
+
+
+/* ------------------------------------------------------------------
+   Große Geräte (Laptops/Desktops - ab 992px)  
+---------------------------------------------------------------------*/
+@media only screen and (min-width:992px){
+/* -------------------------------------------
+  Änderung allgemeine Gestaltung
+--------------------------------------------*/
+
+
+/*--------------------------------------------
+  Änderung Gestaltung des Headers
+--------------------------------------------*/
+	body#menu div#wrapper header nav#hauptNav{
+		width: auto;
+		top:15px
+		
+	}
+header nav#hauptNav ul li a{
+	font-size: 1.1rem;
+	
+}
+	
+/*--------------------------------------------
+  Änderung Gestaltung des Mainbereichs
+--------------------------------------------*/
+
+}
+
+/*--------------------------------------------
+  Änderung Gestaltung des Footers
+--------------------------------------------*/
+}
+/* ------------------------------------------------------------------
+   Eventuell sehr große Geräte (Sehr breite Desktops - ab 1200px)  
+---------------------------------------------------------------------*/
+
+/* -------------------------------------------
+  Änderung Allgemeine Gestaltung
+--------------------------------------------*/
+@media only screen and (min-width:1200px){
+
+/*--------------------------------------------
+  Änderung Gestaltung des Headers
+--------------------------------------------*/
+body#menu div#wrapper header nav#hauptNav{
+		
+		top:20px
+		
+	}
+
+/*--------------------------------------------
+  Änderung Gestaltung des Mainbereichs
+--------------------------------------------*/
+
+
+/*--------------------------------------------
+  Änderung Gestaltung des Footers
+--------------------------------------------*/
+}

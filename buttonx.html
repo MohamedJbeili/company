@@ -1,0 +1,107 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Unbenanntes Dokument</title>
+	<style>
+		.menubtn{
+			position: absolute;
+			right:20px;
+			top:20px;
+			
+			width: 50px;
+			height: 50px;
+		}
+		.auf , .zu{
+		
+			position: absolute;
+			right: 0px;
+			top:0px;
+			margin: auto;
+			transition: all 3s ease-in-out;
+		}
+		.zu{
+			right: -14px;
+			top:2px;
+			opacity: 0;
+			visibility: hidden;
+		}
+		
+		.linie{
+			display: block;
+			width: 35px;
+			height:5px;
+			margin: auto 8px;
+			background-color: #000;
+			margin-top: 8px;
+		}
+		
+		.zu:before{
+			content: "";
+			width: 50px;
+			height: 50px;
+			position: absolute;
+			border:solid 2px transparent;
+			border-radius: 100%;
+			right: 12px;
+			top:-4px;
+			
+		}
+		.zu .linie:first-child{
+			transform: rotate(45deg) translatey(18px);
+			
+		}
+		.zu .linie:last-child{
+			transform: rotate(-45deg) translatey(-18px);
+			
+		}
+		.zu .linie:nth-child(2){
+			opacity: 0
+		}
+		#menu:target .zu:before{
+			border:solid 2px #000;
+		}
+	
+		#menu:target .auf{
+			opacity: 0;
+
+			
+		}
+	
+			#menu:target .zu{
+			opacity: 1;
+				visibility: visible;
+
+		}
+			#menu:target .zu .linie:nth-child(2){
+			opacity: 0
+		}
+		#menu:target .zu .linie:first-child{
+			transform: rotate(45deg) translatey(18px);
+			
+		}
+		#menu:target .zu .linie:last-child{
+			transform: rotate(-45deg) translatey(-18px);
+			
+		}
+		
+	</style>
+</head>
+	<body id="menu">
+	<div class="menubtn">
+	<a href="#menu" class="auf" >
+		<span class="linie"></span>
+		<span class="linie"></span>
+		<span class="linie"></span>
+	</a>
+	<a href="#" class="zu">
+		<span class="linie"></span>
+		<span class="linie"></span>
+		<span class="linie"></span>
+	</a>
+	</div>
+
+
+
+</body>
+</html>

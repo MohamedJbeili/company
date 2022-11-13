@@ -1,0 +1,78 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Unbenanntes Dokument</title>
+	<style>
+		*{
+			box-sizing: border-box;
+		}
+		label{
+			display: inline-block;
+			width:200px;
+			height:30px;
+			line-height:20px;
+			background-color: aqua;
+			padding: 10px;
+			margin-bottom: 5px;
+			cursor: pointer;
+		}
+		input{
+			display: none;
+		}
+		article{
+			height: 0;
+			overflow: hidden;
+			transition: all 0.5s ease-in-out;
+			
+		}
+		input:checked +article{
+			height: 150px;
+			
+		}
+	</style>
+</head>
+
+<body>
+	<section id="Accordion">
+	<label for="bar1">Bar1</label>
+	<input type="radio" id="bar1" name="bar">
+	<article>
+		<h1>Inhalt Bar 1</h1>
+	</article>
+		<label for="bar2">Bar2</label>
+	<input type="radio" id="bar2" name="bar">
+	<article>
+		<h1>Inhalt Bar 2</h1>
+	</article>
+			<label for="bar3">Bar3</label>
+	<input type="radio" id="bar3" name="bar">
+	<article>
+		<h1>Inhalt Bar 3</h1>
+	</article>
+		
+		
+		
+	</section>
+	<section class="Accordion">
+	<label for="bar4">Bar4</label>
+	<input type="radio" id="bar4" name="bar5">
+	<article>
+		<h1>Inhalt Bar 4</h1>
+	</article>
+		<label for="bar5">Bar5</label>
+	<input type="radio" id="bar5" name="bar5">
+	<article>
+		<h1>Inhalt Bar 5</h1>
+	</article>
+			<label for="bar6">Bar6</label>
+	<input type="radio" id="bar6" name="bar5">
+	<article>
+		<h1>Inhalt Bar 6</h1>
+	</article>
+		
+		
+		
+	</section>
+</body>
+</html>

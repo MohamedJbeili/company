@@ -1,0 +1,281 @@
+@charset "utf-8";
+/* CSS Document */
+:root{
+	--blue:#1478c7;
+	--paddingLeft:20px;
+}
+*{
+	font-size: 1.2rem;
+}
+input{
+	
+	border: none;
+	height: 25px;
+	margin-bottom: 10px;
+	padding-left: 5px;
+	box-shadow: 2px -2px 3px -1px #666;
+	
+}
+main section#warenkorb,
+main section#ihreBestellung,
+main section#anschrift,
+main section#bankdaten,
+main section#AGB1{
+	width:90%;
+	margin: 20px auto;
+	padding: 0 0 20px;
+	border-radius: 5px;
+	background: #d9d9d9;
+	position: relative;
+	overflow: hidden;
+}
+
+main section#warenkorb h3,
+main section#ihreBestellung h3,
+main section#anschrift h3,
+main section#bankdaten h3,
+main section#AGB1 h3
+{
+	background-color: var(--mainColor);
+	color: #fff;
+	width: 100%;
+	height: 40px;
+	line-height: 40px;
+	padding-left:var(--paddingLeft);
+	margin-bottom: 20px;
+} 
+
+/* -----------------------------
+          Warenkorb
+---------------------------------
+*/main section#warenkorb ul{
+	padding-left: var(--paddingLeft)
+}
+main section#warenkorb ul li{
+	
+	margin-bottom: 10px;
+	line-height: 20px;
+}
+main section#warenkorb button{
+	width: 70%;
+	height: 50px;
+	background: var(--mainColor);
+	color: #fff;
+	line-height: 50px;
+	font-size: 1.5rem;
+	font-weight: bold;
+	border-radius: 10px;
+	text-align: center;
+	display: block;
+	margin: auto;
+	border: none ;
+	
+}
+
+/* -----------------------------
+          ihreBestellung
+---------------------------------
+*/
+
+main section#ihreBestellung ul{
+	list-style: none;
+	padding-left:var(--paddingLeft)
+	
+}
+main section#ihreBestellung ul li{
+	margin-bottom: 10px;
+}
+main section#ihreBestellung ul li a{
+	color: #000;
+}
+main section#ihreBestellung ul li:hover a{
+	color: var(--mainColor);
+}
+main section#anschrift h3,
+main section#bankdaten h3,
+main section#AGB1 h3
+{
+	padding-left:  55px;
+	position: relative;
+}
+main section#anschrift h3 span,
+main section#bankdaten h3 span,
+main section#AGB1 h3 span{
+	display: inline-block;
+	position: absolute;
+	background: #d9d9d9;
+	color: var(--mainColor);
+	width: 28px;
+	height: 28px;
+	line-height: 30px;
+	border-radius: 3px;
+	left:20px;
+	top: 50%;
+	transform: translateY(-50%);
+	text-align: center;
+}
+
+main section#anschrift form,
+main section#bankdaten form{
+	padding:0 20px;
+	
+}
+
+
+
+/* -----------------------------
+          Anschrift
+---------------------------------
+*/
+
+
+main section#anschrift label{
+	display: block;
+	margin-bottom: 5px;
+}
+main section#anschrift p{
+	line-height: 1.5;
+}
+main section#anschrift input#vorname,
+main section#anschrift input#nachname,
+main section#anschrift input#E-mail
+{
+	
+	width: 100%;
+	
+	
+}
+main section#anschrift form div:nth-child(4),
+main section#anschrift form div:nth-child(5),
+main section#anschrift form div:nth-child(6){
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+}
+main section#anschrift form div:nth-child(4) label,
+main section#anschrift form div:nth-child(5) label, 
+main section#anschrift form div:nth-child(6) label{
+	width: 100%
+}
+main section#anschrift form div:nth-child(4) label~input,
+main section#anschrift form div:nth-child(5) label~input{
+	width: 49%;
+}
+main section#anschrift form div:nth-child(6) label~input:not(:last-child)
+{
+	display: inline-block;
+	width: 25%;
+	margin-right: 2%;
+	
+}
+main section#anschrift form div:nth-child(6) label~input:last-child
+{
+	
+	width: 46%;
+	
+	
+}
+
+
+
+/* -----------------------------
+          Bankdaten
+---------------------------------
+*/
+
+
+main section#bankdaten select.kreditList{
+	width: 67%;
+	margin-left: 5%;
+	margin-bottom: 10px;
+	height: 25px;
+	border: none;
+	background: #fff;
+	box-shadow: 2px -2px 3px -1px #666;
+		
+}
+main section#bankdaten div{
+	margin-bottom: 10px;
+}
+main section#bankdaten div:nth-child(2) input
+{
+	width: 66%;
+	margin-left: 2%;
+}
+main section#bankdaten div:nth-child(3) input {
+	width: 66%;
+	margin-left: 3%;
+}
+main section#bankdaten div select#gültigDate{
+	border: none;
+margin-left: 11%;
+height: 25px;
+background-color: #fff;
+width: 67%;
+text-align: center;
+box-shadow: 2px -2px 3px -1px #666;
+}
+/* -----------------------------
+          AGB
+---------------------------------
+*/main section#AGB1 div{
+	padding-left: var(--paddingLeft);
+	padding-bottom: 20px;
+	margin-bottom: 10px;
+}
+main section#AGB1 div span{
+	display: inline-block;
+	width: 70px;
+	height: 40px;
+	background: url("../material/bg_check.png") no-repeat center center;
+	position: relative;
+	left: -22px;
+}
+main section#AGB1 div span input{
+	position: absolute;
+	left:50%;
+	top:50%;
+	transform: translate(-50%,-50%);
+	border: none;
+}
+main section#AGB1 div label{
+	position: relative;
+    top: 2px;
+    display: inline-block;
+    width: 63%;
+	line-height:20px;
+	left:25px;
+	
+}
+main section#AGB1 div#buttons {
+	position: relative;
+}
+main section#AGB1 div#buttons input{
+	display: inline-block;
+	width: 100px;
+	font-size: 1.2rem;
+	letter-spacing: 1px;
+	text-align: center;
+	position: absolute;
+	cursor: pointer;
+	box-shadow: none;
+	
+}
+main section#AGB1 div#buttons input:first-child{
+	background: #fff;
+	color: var(--blue);
+	border: solid 1px var(--mainColor);
+}
+main section#AGB1 div#buttons input:last-child{
+	
+	right:20px;
+	background: var(--mainColor);
+	color:#fff;
+}
+main section#AGB1 div#buttons input:last-child:hover,
+main section#AGB1 div#buttons input:first-child:hover
+{
+	background: orange;
+	color: #fff;
+}
+

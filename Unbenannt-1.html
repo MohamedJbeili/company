@@ -1,0 +1,82 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Unbenanntes Dokument</title>
+	<style>
+		*{
+			box-sizing: border-box;
+			margin: 0;
+			padding: 0;
+		}
+		#small{
+			
+			width: 600px;
+			margin:20px auto;
+			
+			display: flex;
+			justify-content: space-between;
+		}
+		#big{
+			margin: auto;
+			width: 550px;
+			height: 414px;
+			overflow: hidden;
+			position: relative;
+		}
+		#big figure{
+			position: absolute;
+			top: 0;
+			left: 0;
+			opacity: 0;
+			transition: all ease-in-out 2s;
+		}
+		#bild1:target div#big figure.Bild1{
+			opacity: 1;
+			
+		}
+		
+		
+	</style>
+</head>
+	<div id="small">
+		<figure id="bild1">
+			<a href="#bild1"> <img src="images/thumbs/blume01.jpg" alt=""> </a>
+		</figure>
+		<figure id="bild2">
+			<a href="#bild2"> <img src="images/thumbs/blume02.jpg" alt=""> </a>
+		</figure>
+		<figure id="bild3">
+			<a href="#bild3"> <img src="images/thumbs/blume03.jpg" alt=""> </a>
+		</figure>
+		<figure id="bild4">
+			<a href="#bild4"> <img src="images/thumbs/blume04.jpg" alt=""> </a>
+		</figure>
+		<figure id="bild5">
+			<a href="#bild5"> <img src="images/thumbs/blume05.jpg" alt=""> </a>
+		</figure>
+		
+		
+		
+	</div>
+	<div id="big">
+		<figure class="Bild1">
+		<img src="images/blume01.jpg" alt=""> 
+		</figure>
+		<figure class="Bild2" >
+		<img src="images/blume02.jpg" alt=""> 
+		</figure>
+		<figure class="Bild3">
+		<img src="images/blume03.jpg" alt=""> 
+		</figure>
+		<figure class="Bild4">
+		<img src="images/blume04.jpg" alt=""> 
+		</figure>
+		<figure class="Bild5">
+		<img src="images/blume05.jpg" alt=""> 
+		</figure>
+	</div>
+
+<body>
+</body>
+</html>

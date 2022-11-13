@@ -1,0 +1,78 @@
+@charset "utf-8";
+/* CSS Document */
+
+/*  start Produkte seiet */
+.table {
+	width: 100%;
+	overflow-y: auto;
+	
+}
+
+
+.table::-webkit-scrollbar{
+	-webkit-appearance: none;
+	width: 14px;
+	height: 14px;
+}
+.table::-webkit-scrollbar-thumb {
+  border-radius: 8px;
+  border: 3px solid #fff;
+  background-color: rgba(0, 0, 0, .3);
+}
+table#produkte{
+	width: 200%
+}
+table#produkte caption{
+	width: 50%
+}
+
+table#produkte thead{
+	display: none;
+}
+table#produkte tbody tr td{
+	text-align: center;
+}
+table#produkte tbody tr td.pdt-Preis{
+	font-size: 1.3rem;
+}
+
+table#produkte tbody tr td a.bestell-Btn{
+	
+	background: orange;
+	color: #fff;
+	padding: 5px 10px;
+	border-radius: 5px;
+	cursor: pointer;
+	
+}
+table#produkte tbody tr td a.bestell-Btn:hover{
+	opacity: 0.8;
+}
+/* end Produkte seiet */
+article.produkte {
+	margin-top: 10px;
+	padding: 3%;
+}
+article.produkte  figure{
+	max-width:75%;
+	margin: 10px auto; 
+}
+article.produkte  figure img{
+	max-width:100%;
+}
+article.produkte  button{
+	padding:2px 5px;
+	width: 80px;
+	height: 25px;
+	border: none;
+	border-radius: 10px;
+	background-color: #1478c7;
+	
+	
+}
+article.produkte  button a{
+	color: #fff;
+}
+ article.produkte  button:hover{
+	background-color: #515151;
+}

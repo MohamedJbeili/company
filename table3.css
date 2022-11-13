@@ -1,0 +1,126 @@
+@charset "utf-8";
+/* CSS Document */
+
+* {
+ margin:0;
+ padding:0;
+ }
+ body {
+ background-color: #87C81C;
+ }
+ #tableWrapper {
+ margin:50px;
+ background-color: #FFF;
+ width:600px;
+ border:1px solid #87C81C;
+	 box-shadow:0 0 20px rgba(0, 0, 0, 0.75);
+ }
+ table {
+ margin:50px;
+ padding:0;
+ border:0;
+ border-collapse:collapse;
+ font: normal 81% "Trebuchet MS", Verdana, sans-serif;
+ color:#FFF;
+ }
+ caption {
+ font: italic normal 139%/1.44 Georgia, serif;
+ text-align: right;
+ color: #87C81C;
+ padding:0;
+ margin:0 15px 10px 0;
+ caption-side:bottom;
+ }
+ td, th {
+ padding:0;
+ margin:0;
+ text-align:center;
+ text-shadow: 1px 1px 0px #999;
+ }
+ thead th {
+ height:60px;
+ vertical-align: bottom;
+ font-size:115%;
+ line-height:285%;
+ background:transparent url(Tabellen/bg_head.gif) repeat-x bottom left;
+ }
+ thead td {
+ font-weight:bold;
+ color:#999;
+ vertical-align:bottom;
+ line-height:292%;
+ text-indent:15px;
+ text-align: left;
+ text-shadow: 0px 0px 0px;
+ }
+
+
+
+ tbody td {
+ background:transparent url(Tabellen/bg_body_td.gif) repeat-x bottom left;
+ height:30px;
+ }
+ tbody th {
+ text-align:left;
+ background: transparent url(Tabellen/bg_body_th.gif) no-repeat bottom right;
+ font-weight:bold;
+ text-indent:15px;
+ }
+
+
+
+ tfoot td {
+ background: #FFF url(Tabellen/bg_foot_td.gif) repeat-x top left;
+ height:50px;
+ padding-top:4px;
+ vertical-align:top;
+ text-decoration:underline;
+ }
+ tfoot th {
+ background: #FFF url(Tabellen/bg_foot_th.gif) no-repeat top right;
+ vertical-align:top;
+ padding-top: 4px;
+ text-indent:15px;
+ text-align:left;
+ }
+
+
+
+ thead th.best {
+ background:#FFF url(Tabellen/bg_head_best.gif) no-repeat bottom left;
+ width:100px;
+ padding-bottom:5px;
+ font-size:123%;
+ }
+ tbody td.best {
+ background: transparent url(Tabellen/bg_body_best.gif) no-repeat bottom left;
+	 width:100px;
+ }
+ tfoot td.best {
+ background:transparent url(Tabellen/bg_foot_best.gif) no-repeat top left;
+ width:100px;
+ font-weight:bold;
+ font-style:italic;
+ font-size:123%;
+ }
+
+ img.icon {
+ position:absolute;
+ left:205px;
+ top:175px;
+ width:42px;
+ height:42px;
+ border:none;
+ _display:none;
+ }
+
+
+ img.icon {
+ -webkit-animation-name: rotate;
+ -webkit-animation-duration:3s;
+ -webkit-animation-iteration-count: 1;
+ -webkit-animation-timing-function: linear;
+ }
+ a {
+ color:#FFF;
+ }

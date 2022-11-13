@@ -1,0 +1,126 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Unbenanntes Dokument</title>
+  <style>
+* {
+    box-sizing: border-box;
+    font-family: arial;
+}
+table {
+    margin: 20px auto;
+    border-collapse: collapse;
+    color: #fff;
+    font-family: Arial;
+    font-size: 0.9rem;
+    text-align: center;
+}
+h2 {
+    text-align: center;
+    font-size: 1.2rem;
+    color: #4D960B;
+}
+table colgroup col:first-child {
+    width: 125px;
+}
+table colgroup col:last-child {
+    width: 75px;
+}
+tr, td {
+    height: 30px;
+    padding: 0 10px;
+}
+	  thead td{
+		  color: #666;
+		 vertical-align: bottom
+	  }
+thead th {
+    background: transparent url(Tabellen/bg_head.gif) repeat-x bottom left;
+    height: 60px;
+	padding-bottom: 5px;
+    vertical-align: bottom;
+}
+thead .green {
+    background: #FFF url(Tabellen/bg_head_best.gif) no-repeat bottom left ;
+    width: 100px;
+    padding-bottom: 5px;
+    font-size: 123%;
+}
+tbody tr>th, tfoot tr>th {
+    background: linear-gradient(180deg, #8FFB08 0%, #4D960B 100%);
+}
+tbody td {
+    background: transparent url(Tabellen/bg_body_td.gif) repeat-x bottom left;
+}
+tbody td.green {
+    background: transparent url(Tabellen/bg_body_best.gif) no-repeat bottom left ;
+    width: 100px;
+}
+tfoot td {
+    background: #FFF url(Tabellen/bg_foot_td.gif) repeat-x top left;
+	height: 50px;
+	vertical-align: top;
+	padding-top: 5px;
+		
+
+		
+}
+tfoot .green {
+    background: transparent url(Tabellen/bg_foot_best.gif) no-repeat top left;
+    width: 100px;
+    font-weight: bold;
+    font-style: italic;
+    font-size: 123%;
+}
+</style>
+</head>
+
+<body>
+<table>
+  <colgroup>
+  <col width="125px" >
+  <col span="5">
+  </colgroup>
+  <thead>
+    <tr>
+      <td>Tennisspieler</td>
+      <th>Becker</th>
+      <th class="green">Lendi</th>
+      <th>Sampras</th>
+      <th>Agassi</th>
+      <th>Edberg</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>Gesamt-Spiele:</th>
+      <td>927</td>
+      <td class="green">1308</td>
+      <td>984</td>
+      <td>1144</td>
+      <td>1076</td>
+    </tr>
+    <tr>
+      <th>Bilanz</th>
+      <td>713:214</td>
+      <td class="green">1070:238</td>
+      <td>762:222</td>
+      <td>870:274</td>
+      <td>806:270</td>
+    </tr>
+  </tbody>
+  <tfoot>
+    <tr>
+      <th>Stieg-Quotient</th>
+      <td>76,9%</td>
+      <td class="green">81,8%</td>
+      <td>77,4%</td>
+      <td>76,0%</td>
+      <td>74,9%</td>
+    </tr>
+  </tfoot>
+</table>
+<h2>Direktvergleich ehemailger Top-10-Tennisspieler</h2>
+</body>
+</html>
